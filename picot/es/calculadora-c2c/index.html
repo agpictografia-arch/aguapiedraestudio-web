@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Calculadora C2C de crochet — hileras, aumentos y disminuciones</title>
+<meta name="description" content="Calculadora gratis de crochet esquina a esquina (C2C). Escribe el ancho y el alto en bloques y ve el total de hileras, dónde pasar de aumentar a disminuir y cuántos bloques lleva cada hilera.">
+<link rel="canonical" href="https://aguapiedraestudio.app/picot/es/calculadora-c2c/">
+<link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/calculadora-c2c/">
+<link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<meta name="apple-itunes-app" content="app-id=6801272272">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Calculadora C2C de crochet">
+<meta property="og:description" content="Total de hileras, hileras de aumento y disminución, y bloques por hilera para cualquier pieza esquina a esquina.">
+<meta property="og:url" content="https://aguapiedraestudio.app/picot/es/calculadora-c2c/">
+<meta property="og:image" content="https://aguapiedraestudio.app/picot/img/picot-icon-1024.png">
+<link rel="icon" href="../../img/picot-icon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500&family=Newsreader:opsz,wght@6..72,600&display=swap">
+<link rel="stylesheet" href="../../picot.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Calculadora C2C de crochet","url":"https://aguapiedraestudio.app/picot/es/calculadora-c2c/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requiere JavaScript","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"MXN"},"description":"Calcula el total de hileras, las hileras de aumento, rectas y de disminución, y los bloques por hilera de una pieza de crochet esquina a esquina (C2C).","publisher":{"@type":"Organization","name":"Aguapiedra Estudio","url":"https://aguapiedraestudio.app/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿Cuántas hileras tiene una pieza C2C?","acceptedAnswer":{"@type":"Answer","text":"El ancho más el alto menos uno, contados en bloques. Una cobija de 40 por 50 bloques tiene 89 hileras diagonales. Un cuadrado de 30 por 30 bloques tiene 59."}},
+{"@type":"Question","name":"¿Cuándo empiezo a disminuir en C2C?","acceptedAnswer":{"@type":"Answer","text":"En un cuadrado, justo después de la hilera que tiene tantos bloques como el lado. En un rectángulo, primero aumentas hasta que la hilera tenga tantos bloques como el lado corto; luego tejes hileras rectas (aumentas en un extremo y disminuyes en el otro) hasta llegar al lado largo, y solo entonces disminuyes en los dos extremos."}},
+{"@type":"Question","name":"¿Qué es un bloque en crochet C2C?","acceptedAnswer":{"@type":"Answer","text":"El bloque es el cuadrito de puntos con el que se arma el C2C, casi siempre una cadena y tres puntos altos (vareta). Los patrones y gráficos dan su tamaño en bloques."}},
+{"@type":"Question","name":"¿Importa cuál lado es el ancho?","acceptedAnswer":{"@type":"Answer","text":"No para contar hileras. Si intercambias ancho y alto, el total de hileras y los rangos de aumento, recto y disminución son los mismos."}}
+]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap wide">
+    <a class="brand" href="../"><img src="../../img/picot-icon-256.png" alt="" width="32" height="32">Picot</a>
+    <nav aria-label="Sitio">
+      <a href="../">App contador de hileras</a>
+      <a href="../../c2c-calculator/" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap wide stack-lg">
+      <div class="stack" style="max-width:44rem">
+        <p class="eyebrow">Esquina a esquina · herramienta gratis</p>
+        <h1>Calculadora C2C de crochet</h1>
+        <p class="muted">Escribe tu pieza en bloques. Obtienes el total de hileras, dónde empieza y termina cada fase, y qué hacer en cada hilera.</p>
+      </div>
+
+      <div class="calc">
+        <form class="panel" id="c2c-form" onsubmit="return false">
+          <div class="field">
+            <label for="c2c-w">Ancho (bloques)</label>
+            <input id="c2c-w" type="number" inputmode="numeric" min="1" max="500" step="1" value="40">
+          </div>
+          <div class="field">
+            <label for="c2c-h">Alto (bloques)</label>
+            <input id="c2c-h" type="number" inputmode="numeric" min="1" max="500" step="1" value="50">
+          </div>
+          <div class="field">
+            <label for="c2c-row">Hilera en la que vas (opcional)</label>
+            <input id="c2c-row" type="number" inputmode="numeric" min="1" max="999" step="1" value="47">
+            <span class="help">Valores de ejemplo: una cobija de 40 × 50 bloques, en la hilera 47.</span>
+          </div>
+          <p class="error" id="c2c-err" role="alert" hidden></p>
+        </form>
+
+        <div class="stack-lg" id="c2c-out" style="min-width:0">
+          <div class="readout">
+            <div><b id="c2c-total">89</b><span>hileras diagonales</span></div>
+            <div><b id="c2c-widest">40</b><span>bloques en la hilera más ancha</span></div>
+            <div><b id="c2c-blocks">2,000</b><span>bloques en total</span></div>
+          </div>
+          <div class="stack">
+            <div class="phases" aria-hidden="true"><i class="ph-inc" id="ph-inc"></i><i class="ph-str" id="ph-str"></i><i class="ph-dec" id="ph-dec"></i></div>
+            <div class="legend">
+              <span><i class="ph-inc"></i><span id="lg-inc">Aumento: hileras 1–40</span></span>
+              <span><i class="ph-str"></i><span id="lg-str">Recto: hileras 41–50</span></span>
+              <span><i class="ph-dec"></i><span id="lg-dec">Disminución: hileras 51–89</span></span>
+            </div>
+          </div>
+          <div class="now" id="c2c-now" aria-live="polite"></div>
+          <div class="rows-wrap">
+            <table>
+              <thead><tr><th scope="col" class="num">Hilera</th><th scope="col">Fase</th><th scope="col" class="num">Bloques</th><th scope="col">En los extremos</th></tr></thead>
+              <tbody id="c2c-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Cómo funcionan las hileras en C2C</h2>
+      <p>El esquina a esquina se teje en diagonal, una hilera de bloques a la vez. Una pieza de A bloques de ancho y H de alto siempre tiene <span class="num">A + H − 1</span> hileras, y cada hilera cae en una de tres fases.</p>
+      <ul class="plain">
+        <li><strong>Aumento.</strong> Desde la hilera 1 hasta que la hilera tenga tantos bloques como el lado corto. Cada hilera suma un bloque en los dos extremos.</li>
+        <li><strong>Recto.</strong> Solo en rectángulos. Aumentas en un extremo y disminuyes en el otro, así la hilera conserva los mismos bloques mientras la pieza crece hacia el lado largo.</li>
+        <li><strong>Disminución.</strong> Hasta la última esquina. Cada hilera pierde un bloque en los dos extremos.</li>
+      </ul>
+      <p>Un rectángulo chico, de 5 bloques de ancho y 3 de alto, hilera por hilera:</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col" class="num">Hilera</th><th scope="col">Fase</th><th scope="col" class="num">Bloques</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td>Aumento</td><td class="num">1</td></tr>
+            <tr><td class="num">2</td><td>Aumento</td><td class="num">2</td></tr>
+            <tr><td class="num">3</td><td>Aumento</td><td class="num">3</td></tr>
+            <tr><td class="num">4</td><td>Recto</td><td class="num">3</td></tr>
+            <tr><td class="num">5</td><td>Recto</td><td class="num">3</td></tr>
+            <tr><td class="num">6</td><td>Disminución</td><td class="num">2</td></tr>
+            <tr><td class="num">7</td><td>Disminución</td><td class="num">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Un cuadrado no tiene hileras rectas: uno de 3 × 3 aumenta en las hileras 1–3 y disminuye en las 4–5.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Preguntas</h2>
+      <div>
+        <details><summary>¿Cuántas hileras tiene una pieza C2C?</summary><p>El ancho más el alto menos uno, contados en bloques. Una cobija de 40 por 50 bloques tiene 89 hileras diagonales. Un cuadrado de 30 por 30 bloques tiene 59.</p></details>
+        <details><summary>¿Cuándo empiezo a disminuir en C2C?</summary><p>En un cuadrado, justo después de la hilera que tiene tantos bloques como el lado. En un rectángulo, primero aumentas hasta que la hilera tenga tantos bloques como el lado corto; luego tejes hileras rectas (aumentas en un extremo y disminuyes en el otro) hasta llegar al lado largo, y solo entonces disminuyes en los dos extremos.</p></details>
+        <details><summary>¿Qué es un bloque en crochet C2C?</summary><p>El bloque es el cuadrito de puntos con el que se arma el C2C, casi siempre una cadena y tres puntos altos (vareta). Los patrones y gráficos dan su tamaño en bloques.</p></details>
+        <details><summary>¿Importa cuál lado es el ancho?</summary><p>No para contar hileras. Si intercambias ancho y alto, el total de hileras y los rangos de aumento, recto y disminución son los mismos.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Que tu muñeca lleve la cuenta.</h2>
+    <p class="muted">El contador esquina a esquina de Picot usa la misma cuenta: en cada hilera te dice si aumentar o disminuir y cuántos bloques lleva, en iPhone y Apple Watch. El contador C2C es parte de Picot Pro, una compra única.</p>
+    <a class="store" href="https://apps.apple.com/mx/app/apple-store/id6801272272?pt=129049158&amp;ct=web-c2c-es&amp;mt=8">Ver Picot en el App Store</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap wide">
+    <nav aria-label="Pie de página">
+      <a href="../">Picot contador de hileras</a>
+      <a href="../../support/">Soporte</a>
+      <a href="../../privacy/">Privacidad</a>
+      <a href="../../c2c-calculator/" hreflang="en" lang="en">C2C calculator in English</a>
+    </nav>
+    <p>Hecho por Aguapiedra Estudio, México. La calculadora funciona en tu navegador y no envía nada.</p>
+  </div>
+</footer>
+<script src="../../c2c.js"></script>
+<script src="../../c2c-ui.js"></script>
+</body>
+</html>

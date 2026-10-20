@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Picot — Contador de hileras para Apple Watch y iPhone</title>
+<meta name="description" content="Picot es un contador de hileras para tejer con agujas y ganchillo, en Apple Watch y iPhone. Cuenta desde tu muñeca aunque el teléfono esté en otro cuarto. Gratis para empezar, Pro con pago único, sin cuenta y sin suscripción.">
+<link rel="canonical" href="https://aguapiedraestudio.app/picot/es/">
+<link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/">
+<link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/">
+<link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/picot/">
+<meta name="apple-itunes-app" content="app-id=6801272272">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Picot — Contador de hileras para Apple Watch y iPhone">
+<meta property="og:description" content="Cuenta hileras de tejido y crochet desde tu muñeca. Sin cuenta y sin suscripción.">
+<meta property="og:url" content="https://aguapiedraestudio.app/picot/es/">
+<meta property="og:image" content="https://aguapiedraestudio.app/picot/img/picot-icon-1024.png">
+<link rel="icon" href="../img/picot-icon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500&family=Newsreader:opsz,wght@6..72,600&display=swap">
+<link rel="stylesheet" href="../picot.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Picot","alternateName":"Contador de Tejido - Picot","applicationCategory":"LifestyleApplication","operatingSystem":"iOS, watchOS","description":"Contador de hileras para tejer con agujas y ganchillo, en Apple Watch y iPhone. El reloj cuenta solo, aunque el iPhone esté lejos o apagado. Gratis para empezar; Picot Pro es una compra única dentro de la app. Sin cuenta, sin suscripción y sin anuncios.","url":"https://aguapiedraestudio.app/picot/es/","downloadUrl":"https://apps.apple.com/mx/app/id6801272272","image":"https://aguapiedraestudio.app/picot/img/picot-icon-1024.png","inLanguage":["es","en"],"offers":{"@type":"Offer","price":"0","priceCurrency":"MXN"},"author":{"@type":"Person","name":"Antonio González Isunza"},"publisher":{"@type":"Organization","name":"Aguapiedra Estudio","url":"https://aguapiedraestudio.app/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"¿El Apple Watch necesita el iPhone cerca?","acceptedAnswer":{"@type":"Answer","text":"No. El reloj cuenta solo, aunque el iPhone esté lejos o apagado. Cuando vuelven a estar cerca se ponen al día solos y se suman todos los toques."}},
+{"@type":"Question","name":"¿Picot es una suscripción?","acceptedAnswer":{"@type":"Answer","text":"No. Picot es gratis para empezar con un proyecto y un contador, Apple Watch incluido. Picot Pro es una compra única. No hay anuncios ni cuenta."}},
+{"@type":"Question","name":"¿Necesito un Apple Watch?","acceptedAnswer":{"@type":"Answer","text":"No. Picot funciona igual solo con el iPhone. El reloj agrega la cuenta desde tu muñeca."}},
+{"@type":"Question","name":"¿Sirve para tejer con agujas o con ganchillo?","acceptedAnswer":{"@type":"Answer","text":"Para los dos. Picot cuenta hileras con agujas y con ganchillo, e incluye contadores de repetición y esquina a esquina en Picot Pro."}},
+{"@type":"Question","name":"¿Puedo respaldar mis proyectos?","acceptedAnswer":{"@type":"Answer","text":"Sí. Guarda un respaldo en Archivos, iCloud Drive o por correo y restáuralo en cualquier iPhone. Restaurar nunca borra lo que ya tienes. Los patrones en PDF se quedan en el iPhone donde los agregaste."}},
+{"@type":"Question","name":"¿Picot recopila mis datos?","acceptedAnswer":{"@type":"Answer","text":"No. Picot no tiene cuenta ni inicio de sesión, y no recopila datos."}}
+]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap wide">
+    <a class="brand" href="./"><img src="../img/picot-icon-256.png" alt="" width="32" height="32">Picot</a>
+    <nav aria-label="Sitio">
+      <a href="calculadora-c2c/">Calculadora C2C</a>
+      <a href="../support/">Soporte</a>
+      <a href="../" hreflang="en" lang="en">English</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap wide">
+    <div class="hero">
+      <div class="stack-lg">
+        <p class="eyebrow">Contador de hileras · tejido y ganchillo</p>
+        <h1>Cuenta hileras desde tu muñeca, con la vista en el tejido.</h1>
+        <p class="lede">Picot cuenta hileras en tu Apple Watch y en tu iPhone, aunque el teléfono esté en otro cuarto.</p>
+        <div class="cta-row">
+          <a class="store" href="https://apps.apple.com/mx/app/apple-store/id6801272272?pt=129049158&amp;ct=web-picot-es&amp;mt=8">Ver Picot en el App Store</a>
+          <p class="price-note">Gratis para empezar. Picot Pro es una compra única.</p>
+        </div>
+      </div>
+
+      <button class="dial" id="dial" type="button" aria-label="Contador de demostración. Toca para sumar una hilera.">
+        <span class="label"><span>Suéter · Manga</span><span>Hilera</span></span>
+        <span class="count" id="dial-count" aria-live="polite">47</span>
+        <span class="alert" id="dial-alert" hidden>Hilera 50 · disminuye</span>
+        <span class="hint">Pruébalo: toca este panel para sumar una hilera. En el reloj funciona igual con toda la pantalla.</span>
+      </button>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Cuenta en tu muñeca</h2>
+      <ul class="plain">
+        <li>Toca en cualquier parte del reloj para sumar una hilera.</li>
+        <li>Mantén presionado hasta que se cierre el anillo para restar una.</li>
+        <li>Gira la corona para elegir contador y toca para confirmar.</li>
+        <li>Agrega Picot a la carátula del reloj: un toque lo abre, y el espacio grande muestra tu hilera actual.</li>
+        <li>El reloj cuenta solo, aunque el iPhone esté lejos o apagado. Cuando vuelven a estar cerca se ponen al día solos y se suman todos los toques.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap wide stack-lg">
+      <div class="wrap" style="padding:0">
+        <h2>Para quien teje en serio, con agujas o ganchillo</h2>
+      </div>
+      <div class="shots">
+        <figure><img src="../img/picot-es-01.png" alt="Captura de Picot en el App Store 1" loading="lazy" width="1290" height="2796"></figure>
+        <figure><img src="../img/picot-es-02.png" alt="Captura de Picot en el App Store 2" loading="lazy" width="1290" height="2796"></figure>
+        <figure><img src="../img/picot-es-3.png" alt="Captura de Picot en el App Store 3" loading="lazy" width="1290" height="2796"></figure>
+      </div>
+      <div class="wrap" style="padding:0">
+        <ul class="plain">
+          <li>Un número grande que se lee de un vistazo.</li>
+          <li><strong>Tu patrón, justo encima de tu cuenta (Pro).</strong> Adjunta el PDF, arrastra la línea hasta la hilera en la que vas y toca para contar sin salir de la página.</li>
+          <li><strong>Avisos por hilera (Pro).</strong> Pon una nota en cualquier hilera, como "disminuye" o "cambia de color", y Picot te la muestra al llegar. Si cuentas en el reloj, te avisa en la muñeca.</li>
+          <li><strong>Un contador para cada pieza (Pro).</strong> Cuerpo, mangas, cuello.</li>
+          <li><strong>Contador de repetición (Pro).</strong> Lo fijas cada N hileras y Picot te dice en qué repetición vas y en qué hilera de ella.</li>
+          <li><strong>Esquina a esquina (Pro).</strong> Picot te dice cuándo aumentar o disminuir y cuántos bloques lleva la hilera. <a href="calculadora-c2c/">Planea tu pieza C2C con la calculadora gratis</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Picot hace una sola cosa</h2>
+      <p class="muted">Casi todas las apps de tejido son suites: patrones, inventario de estambre, comunidad y, en algún lugar, un contador. Picot es solo el contador, hecho para no perder la cuenta.</p>
+      <div class="split">
+        <div class="stack">
+          <h3>Lo que Picot es</h3>
+          <ul class="plain">
+            <li>Un contador de hileras para iPhone y Apple Watch</li>
+            <li>Cada toque se guarda al instante</li>
+            <li>Los proyectos y contadores eliminados se guardan 30 días en la papelera</li>
+            <li>Respaldos que guardas en Archivos, iCloud Drive o por correo</li>
+            <li>Exportación de tus proyectos y cuentas de hileras a un archivo</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <h3>Lo que Picot no es</h3>
+          <ul class="plain">
+            <li>Una biblioteca de patrones ni un inventario de estambre</li>
+            <li>Una red social</li>
+            <li>Una cuenta en la que tengas que iniciar sesión</li>
+            <li>Una suscripción</li>
+            <li>Una app con anuncios</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Gratis y Pro</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Función</th><th scope="col">Gratis</th><th scope="col">Picot Pro</th></tr></thead>
+          <tbody>
+            <tr><td>App del Apple Watch y complicación en la carátula</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+            <tr><td>Proyectos</td><td>1</td><td>Ilimitados</td></tr>
+            <tr><td>Contadores por proyecto</td><td>1</td><td>Ilimitados</td></tr>
+            <tr><td>Contadores de repetición y esquina a esquina</td><td>—</td><td class="yes">Sí</td></tr>
+            <tr><td>Patrón en PDF encima de tu cuenta</td><td>—</td><td class="yes">Sí</td></tr>
+            <tr><td>Avisos por hilera</td><td>—</td><td class="yes">Sí</td></tr>
+            <tr><td>Respaldo, restauración, papelera y exportación</td><td class="yes">Sí</td><td class="yes">Sí</td></tr>
+            <tr><td>Precio</td><td>Gratis</td><td>Compra única. En México, $249 MXN; el precio varía por país.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Picot Pro se puede compartir con tu familia con Compartir en familia.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Preguntas</h2>
+      <div>
+        <details><summary>¿El Apple Watch necesita el iPhone cerca?</summary><p>No. El reloj cuenta solo, aunque el iPhone esté lejos o apagado. Cuando vuelven a estar cerca se ponen al día solos y se suman todos los toques.</p></details>
+        <details><summary>¿Picot es una suscripción?</summary><p>No. Picot es gratis para empezar con un proyecto y un contador, Apple Watch incluido. Picot Pro es una compra única. No hay anuncios ni cuenta.</p></details>
+        <details><summary>¿Necesito un Apple Watch?</summary><p>No. Picot funciona igual solo con el iPhone. El reloj agrega la cuenta desde tu muñeca.</p></details>
+        <details><summary>¿Sirve para tejer con agujas o con ganchillo?</summary><p>Para los dos. Picot cuenta hileras con agujas y con ganchillo, e incluye contadores de repetición y esquina a esquina en Picot Pro.</p></details>
+        <details><summary>¿Puedo respaldar mis proyectos?</summary><p>Sí. Guarda un respaldo en Archivos, iCloud Drive o por correo y restáuralo en cualquier iPhone. Restaurar nunca borra lo que ya tienes. Los patrones en PDF se quedan en el iPhone donde los agregaste.</p></details>
+        <details><summary>¿Picot recopila mis datos?</summary><p>No. Picot no tiene cuenta ni inicio de sesión, y no recopila datos.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Nunca pierdas la cuenta.</h2>
+    <a class="store" href="https://apps.apple.com/mx/app/apple-store/id6801272272?pt=129049158&amp;ct=web-picot-es&amp;mt=8">Ver Picot en el App Store</a>
+    <p class="price-note">Disponible en español e inglés.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap wide">
+    <nav aria-label="Pie de página">
+      <a href="calculadora-c2c/">Calculadora C2C</a>
+      <a href="../support/">Soporte</a>
+      <a href="../privacy/">Privacidad</a>
+      <a href="../" hreflang="en" lang="en">Picot in English</a>
+    </nav>
+    <p>Picot es una app de Antonio González Isunza (Aguapiedra Estudio), México. Apple Watch y iPhone son marcas de Apple Inc.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var n=47, alertAt=50;
+  var dial=document.getElementById('dial'), c=document.getElementById('dial-count'), al=document.getElementById('dial-alert');
+  function draw(){ c.textContent=n; al.hidden=(n!==alertAt); }
+  dial.addEventListener('click',function(){ n = n>=99 ? 1 : n+1; draw(); });
+  draw();
+})();
+</script>
+</body>
+</html>

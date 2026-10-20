@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>C2C Crochet Calculator — Rows, Increases and Decreases</title>
+<meta name="description" content="Free corner to corner (C2C) crochet calculator. Enter your width and height in blocks to see the total rows, where to switch from increasing to decreasing, and how many blocks every row has.">
+<link rel="canonical" href="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/calculadora-c2c/">
+<link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<meta name="apple-itunes-app" content="app-id=6801272272">
+<meta property="og:type" content="website">
+<meta property="og:title" content="C2C Crochet Calculator">
+<meta property="og:description" content="Total rows, increase and decrease rows, and blocks per row for any corner to corner piece.">
+<meta property="og:url" content="https://aguapiedraestudio.app/picot/c2c-calculator/">
+<meta property="og:image" content="https://aguapiedraestudio.app/picot/img/picot-icon-1024.png">
+<link rel="icon" href="../img/picot-icon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500&family=Newsreader:opsz,wght@6..72,600&display=swap">
+<link rel="stylesheet" href="../picot.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"C2C Crochet Calculator","url":"https://aguapiedraestudio.app/picot/c2c-calculator/","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"description":"Calculates total rows, increase, straight and decrease rows, and blocks per row for a corner to corner (C2C) crochet rectangle or square.","publisher":{"@type":"Organization","name":"Aguapiedra Estudio","url":"https://aguapiedraestudio.app/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"How many rows does a C2C piece have?","acceptedAnswer":{"@type":"Answer","text":"Width plus height minus one, counted in blocks. A 40 by 50 block blanket has 89 diagonal rows. A square of 30 by 30 blocks has 59."}},
+{"@type":"Question","name":"When do I start decreasing in C2C?","acceptedAnswer":{"@type":"Answer","text":"In a square, right after the row that has as many blocks as the side. In a rectangle, you first increase until the row has as many blocks as the short side, then work straight rows (increase at one end, decrease at the other) until you reach the long side, and only then decrease at both ends."}},
+{"@type":"Question","name":"What is a block in C2C crochet?","acceptedAnswer":{"@type":"Answer","text":"A block, also called a tile, is the small square of stitches that C2C builds with, usually a chain and three double crochet (US) or treble crochet (UK). Patterns and graphs give their size in blocks."}},
+{"@type":"Question","name":"Does it matter which side is the width?","acceptedAnswer":{"@type":"Answer","text":"Not for the row count. Swapping width and height gives the same total rows and the same increase, straight and decrease ranges."}}
+]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap wide">
+    <a class="brand" href="../"><img src="../img/picot-icon-256.png" alt="" width="32" height="32">Picot</a>
+    <nav aria-label="Site">
+      <a href="../">Row counter app</a>
+      <a href="../es/calculadora-c2c/" hreflang="es" lang="es">Español</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section>
+    <div class="wrap wide stack-lg">
+      <div class="stack" style="max-width:44rem">
+        <p class="eyebrow">Corner to corner · free tool</p>
+        <h1>C2C crochet calculator</h1>
+        <p class="muted">Enter your piece in blocks. You get the total rows, where each phase starts and ends, and what to do on every row.</p>
+      </div>
+
+      <div class="calc">
+        <form class="panel" id="c2c-form" onsubmit="return false">
+          <div class="field">
+            <label for="c2c-w">Width (blocks)</label>
+            <input id="c2c-w" type="number" inputmode="numeric" min="1" max="500" step="1" value="40">
+          </div>
+          <div class="field">
+            <label for="c2c-h">Height (blocks)</label>
+            <input id="c2c-h" type="number" inputmode="numeric" min="1" max="500" step="1" value="50">
+          </div>
+          <div class="field">
+            <label for="c2c-row">Row you're on (optional)</label>
+            <input id="c2c-row" type="number" inputmode="numeric" min="1" max="999" step="1" value="47">
+            <span class="help">Example values: a 40 × 50 block blanket, on row 47.</span>
+          </div>
+          <p class="error" id="c2c-err" role="alert" hidden></p>
+        </form>
+
+        <div class="stack-lg" id="c2c-out" style="min-width:0">
+          <div class="readout">
+            <div><b id="c2c-total">89</b><span>diagonal rows</span></div>
+            <div><b id="c2c-widest">40</b><span>blocks in the widest row</span></div>
+            <div><b id="c2c-blocks">2,000</b><span>blocks in total</span></div>
+          </div>
+          <div class="stack">
+            <div class="phases" aria-hidden="true"><i class="ph-inc" id="ph-inc"></i><i class="ph-str" id="ph-str"></i><i class="ph-dec" id="ph-dec"></i></div>
+            <div class="legend">
+              <span><i class="ph-inc"></i><span id="lg-inc">Increase: rows 1–40</span></span>
+              <span><i class="ph-str"></i><span id="lg-str">Straight: rows 41–50</span></span>
+              <span><i class="ph-dec"></i><span id="lg-dec">Decrease: rows 51–89</span></span>
+            </div>
+          </div>
+          <div class="now" id="c2c-now" aria-live="polite"></div>
+          <div class="rows-wrap">
+            <table>
+              <thead><tr><th scope="col" class="num">Row</th><th scope="col">Phase</th><th scope="col" class="num">Blocks</th><th scope="col">At the ends</th></tr></thead>
+              <tbody id="c2c-rows"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>How C2C rows work</h2>
+      <p>Corner to corner is worked on the diagonal, one row of blocks at a time. A piece W blocks wide and H blocks tall always has <span class="num">W + H − 1</span> rows, and every row falls in one of three phases.</p>
+      <ul class="plain">
+        <li><strong>Increase.</strong> From row 1 until the row has as many blocks as the short side. Each row adds a block at both ends.</li>
+        <li><strong>Straight.</strong> Only in rectangles. You increase at one end and decrease at the other, so the row keeps the same number of blocks while the piece grows toward the long side.</li>
+        <li><strong>Decrease.</strong> Until the last corner. Each row loses a block at both ends.</li>
+      </ul>
+      <p>Here is a small rectangle, 5 blocks wide and 3 tall, row by row:</p>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col" class="num">Row</th><th scope="col">Phase</th><th scope="col" class="num">Blocks</th></tr></thead>
+          <tbody>
+            <tr><td class="num">1</td><td>Increase</td><td class="num">1</td></tr>
+            <tr><td class="num">2</td><td>Increase</td><td class="num">2</td></tr>
+            <tr><td class="num">3</td><td>Increase</td><td class="num">3</td></tr>
+            <tr><td class="num">4</td><td>Straight</td><td class="num">3</td></tr>
+            <tr><td class="num">5</td><td>Straight</td><td class="num">3</td></tr>
+            <tr><td class="num">6</td><td>Decrease</td><td class="num">2</td></tr>
+            <tr><td class="num">7</td><td>Decrease</td><td class="num">1</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">A square has no straight rows: a 3 × 3 square increases on rows 1–3 and decreases on rows 4–5.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Questions</h2>
+      <div>
+        <details><summary>How many rows does a C2C piece have?</summary><p>Width plus height minus one, counted in blocks. A 40 by 50 block blanket has 89 diagonal rows. A square of 30 by 30 blocks has 59.</p></details>
+        <details><summary>When do I start decreasing in C2C?</summary><p>In a square, right after the row that has as many blocks as the side. In a rectangle, you first increase until the row has as many blocks as the short side, then work straight rows (increase at one end, decrease at the other) until you reach the long side, and only then decrease at both ends.</p></details>
+        <details><summary>What is a block in C2C crochet?</summary><p>A block, also called a tile, is the small square of stitches that C2C builds with, usually a chain and three double crochet (US) or treble crochet (UK). Patterns and graphs give their size in blocks.</p></details>
+        <details><summary>Does it matter which side is the width?</summary><p>Not for the row count. Swapping width and height gives the same total rows and the same increase, straight and decrease ranges.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Let your wrist keep the count.</h2>
+    <p class="muted">Picot's corner-to-corner counter uses the same math: it tells you on every row whether to increase or decrease and how many blocks the row has, on iPhone and Apple Watch. The C2C counter is part of Picot Pro, a one-time purchase.</p>
+    <a class="store" href="https://apps.apple.com/app/apple-store/id6801272272?pt=129049158&amp;ct=web-c2c-en&amp;mt=8">View Picot on the App Store</a>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap wide">
+    <nav aria-label="Footer">
+      <a href="../">Picot row counter</a>
+      <a href="../support/">Support</a>
+      <a href="../privacy/">Privacy</a>
+      <a href="../es/calculadora-c2c/" hreflang="es" lang="es">Calculadora C2C en español</a>
+    </nav>
+    <p>Made by Aguapiedra Estudio, Mexico. The calculator runs in your browser and sends nothing anywhere.</p>
+  </div>
+</footer>
+<script src="../c2c.js"></script>
+<script src="../c2c-ui.js"></script>
+</body>
+</html>

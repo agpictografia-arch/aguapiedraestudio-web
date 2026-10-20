@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Picot — Row Counter for Apple Watch and iPhone</title>
+<meta name="description" content="Picot is a knitting and crochet row counter for Apple Watch and iPhone. Tap your wrist to count rows, even with your phone in another room. Free to start, one-time Pro purchase, no account, no subscription.">
+<link rel="canonical" href="https://aguapiedraestudio.app/picot/">
+<link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/">
+<link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/">
+<link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/picot/">
+<meta name="apple-itunes-app" content="app-id=6801272272">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Picot — Row Counter for Apple Watch and iPhone">
+<meta property="og:description" content="Count knitting and crochet rows on your wrist. No account, no subscription.">
+<meta property="og:url" content="https://aguapiedraestudio.app/picot/">
+<meta property="og:image" content="https://aguapiedraestudio.app/picot/img/picot-icon-1024.png">
+<link rel="icon" href="img/picot-icon-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@300;400;500&family=Newsreader:opsz,wght@6..72,600&display=swap">
+<link rel="stylesheet" href="picot.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Picot","alternateName":["Knitting Row Counter - Picot","Crochet Row Counter - Picot"],"applicationCategory":"LifestyleApplication","operatingSystem":"iOS, watchOS","description":"A knitting and crochet row counter for Apple Watch and iPhone. The Watch counts on its own, even when the iPhone is far away or off. Free to start; Picot Pro is a one-time In-App Purchase. No account, no subscription, no ads.","url":"https://aguapiedraestudio.app/picot/","downloadUrl":"https://apps.apple.com/app/id6801272272","image":"https://aguapiedraestudio.app/picot/img/picot-icon-1024.png","inLanguage":["en","es"],"offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@type":"Person","name":"Antonio González Isunza"},"publisher":{"@type":"Organization","name":"Aguapiedra Estudio","url":"https://aguapiedraestudio.app/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+{"@type":"Question","name":"Does the Apple Watch need my iPhone nearby?","acceptedAnswer":{"@type":"Answer","text":"No. Your Watch counts on its own, even if your iPhone is far away or off. When they're back together, they catch up on their own, and every tap adds up."}},
+{"@type":"Question","name":"Is Picot a subscription?","acceptedAnswer":{"@type":"Answer","text":"No. Picot is free to start with one project and one counter, Apple Watch included. Picot Pro is a one-time purchase. There are no ads and no account."}},
+{"@type":"Question","name":"Do I need an Apple Watch?","acceptedAnswer":{"@type":"Answer","text":"No. Picot works the same on iPhone alone. The Watch adds counting from your wrist."}},
+{"@type":"Question","name":"Is it for knitting or crochet?","acceptedAnswer":{"@type":"Answer","text":"Both. Picot counts rows for knitting needles and crochet hooks, and includes repeat and corner-to-corner counters in Picot Pro."}},
+{"@type":"Question","name":"Can I back up my projects?","acceptedAnswer":{"@type":"Answer","text":"Yes. Save a backup to Files, iCloud Drive or email and restore it on any iPhone. Restoring never deletes what you already have. PDF patterns stay on the iPhone where you added them."}},
+{"@type":"Question","name":"Does Picot collect my data?","acceptedAnswer":{"@type":"Answer","text":"No. Picot has no account and no sign-in, and it collects no data."}}
+]}
+</script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap wide">
+    <a class="brand" href="./"><img src="img/picot-icon-256.png" alt="" width="32" height="32">Picot</a>
+    <nav aria-label="Site">
+      <a href="c2c-calculator/">C2C calculator</a>
+      <a href="support/">Support</a>
+      <a href="es/" hreflang="es" lang="es">Español</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap wide">
+    <div class="hero">
+      <div class="stack-lg">
+        <p class="eyebrow">Knitting &amp; crochet row counter</p>
+        <h1>Count rows on your wrist. Keep your eyes on the stitches.</h1>
+        <p class="lede">Picot counts rows on your Apple Watch and your iPhone, even when your phone is in another room.</p>
+        <div class="cta-row">
+          <a class="store" href="https://apps.apple.com/app/apple-store/id6801272272?pt=129049158&amp;ct=web-picot-en&amp;mt=8">View Picot on the App Store</a>
+          <p class="price-note">Free to start. Picot Pro is a one-time purchase.</p>
+        </div>
+      </div>
+
+      <button class="dial" id="dial" type="button" aria-label="Demo counter. Tap to add a row.">
+        <span class="label"><span>Sweater · Sleeve</span><span>Row</span></span>
+        <span class="count" id="dial-count" aria-live="polite">47</span>
+        <span class="alert" id="dial-alert" hidden>Row 50 · decrease</span>
+        <span class="hint">Try it: tap anywhere on this panel to add a row. On the Watch, the whole screen works the same way.</span>
+      </button>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Count on your wrist</h2>
+      <ul class="plain">
+        <li>Tap anywhere on your Watch to add a row.</li>
+        <li>Press and hold until the ring closes to take one off.</li>
+        <li>Turn the Digital Crown to pick a counter, then tap to confirm.</li>
+        <li>Add Picot to your watch face: one tap opens it, and the larger slot shows your current row.</li>
+        <li>Your Watch counts on its own, even if your iPhone is far away or off. When they're back together they catch up, and every tap adds up.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap wide stack-lg">
+      <div class="wrap" style="padding:0">
+        <h2>Made for people who knit and crochet seriously</h2>
+      </div>
+      <div class="shots">
+        <figure><img src="img/picot-en-01.png" alt="Picot App Store screenshot 1" loading="lazy" width="1290" height="2796"></figure>
+        <figure><img src="img/picot-en-02.png" alt="Picot App Store screenshot 2" loading="lazy" width="1290" height="2796"></figure>
+        <figure><img src="img/picot-en-3.png" alt="Picot App Store screenshot 3" loading="lazy" width="1290" height="2796"></figure>
+      </div>
+      <div class="wrap" style="padding:0">
+        <ul class="plain">
+          <li>One large number you can read at a glance.</li>
+          <li><strong>Your pattern, right above your count (Pro).</strong> Attach the PDF, drag the line to the row you're on, and tap to count without leaving the page.</li>
+          <li><strong>Row alerts (Pro).</strong> Set a note for any row, like "decrease" or "change color", and Picot shows it when you get there. Count on the Watch and it taps your wrist.</li>
+          <li><strong>A counter for each piece (Pro).</strong> Body, sleeves, collar.</li>
+          <li><strong>Repeat counter (Pro).</strong> Set it to every N rows and Picot shows which repeat you're on and where you are in it.</li>
+          <li><strong>Corner to corner (Pro).</strong> Picot tells you when to increase or decrease and how many blocks the row has. <a href="c2c-calculator/">Plan a C2C piece with the free calculator</a>.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Picot does one thing</h2>
+      <p class="muted">Most knitting and crochet apps are suites: patterns, yarn stash, community, a counter somewhere inside. Picot is only the counter, built to never lose the count.</p>
+      <div class="split">
+        <div class="stack">
+          <h3>What Picot is</h3>
+          <ul class="plain">
+            <li>A row counter for iPhone and Apple Watch</li>
+            <li>Every tap saved instantly</li>
+            <li>Deleted projects and counters kept 30 days in the trash</li>
+            <li>Backups you keep in Files, iCloud Drive or email</li>
+            <li>Export of your projects and row counts to a file</li>
+          </ul>
+        </div>
+        <div class="stack">
+          <h3>What Picot isn't</h3>
+          <ul class="plain">
+            <li>A pattern library or a yarn stash</li>
+            <li>A social network</li>
+            <li>An account you sign in to</li>
+            <li>A subscription</li>
+            <li>An app with ads</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Free and Pro</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th scope="col">Feature</th><th scope="col">Free</th><th scope="col">Picot Pro</th></tr></thead>
+          <tbody>
+            <tr><td>Apple Watch app and watch face complication</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Projects</td><td>1</td><td>Unlimited</td></tr>
+            <tr><td>Counters per project</td><td>1</td><td>Unlimited</td></tr>
+            <tr><td>Repeat and corner-to-corner counters</td><td>—</td><td class="yes">Yes</td></tr>
+            <tr><td>PDF pattern above your count</td><td>—</td><td class="yes">Yes</td></tr>
+            <tr><td>Row alerts</td><td>—</td><td class="yes">Yes</td></tr>
+            <tr><td>Backup, restore, trash and export</td><td class="yes">Yes</td><td class="yes">Yes</td></tr>
+            <tr><td>Price</td><td>Free</td><td>One-time purchase. US$13.99 in the US; prices vary by country.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="small muted">Picot Pro can be shared with your family through Family Sharing.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap stack-lg">
+      <h2>Questions</h2>
+      <div>
+        <details><summary>Does the Apple Watch need my iPhone nearby?</summary><p>No. Your Watch counts on its own, even if your iPhone is far away or off. When they're back together, they catch up on their own, and every tap adds up.</p></details>
+        <details><summary>Is Picot a subscription?</summary><p>No. Picot is free to start with one project and one counter, Apple Watch included. Picot Pro is a one-time purchase. There are no ads and no account.</p></details>
+        <details><summary>Do I need an Apple Watch?</summary><p>No. Picot works the same on iPhone alone. The Watch adds counting from your wrist.</p></details>
+        <details><summary>Is it for knitting or crochet?</summary><p>Both. Picot counts rows for knitting needles and crochet hooks, and includes repeat and corner-to-corner counters in Picot Pro.</p></details>
+        <details><summary>Can I back up my projects?</summary><p>Yes. Save a backup to Files, iCloud Drive or email and restore it on any iPhone. Restoring never deletes what you already have. PDF patterns stay on the iPhone where you added them.</p></details>
+        <details><summary>Does Picot collect my data?</summary><p>No. Picot has no account and no sign-in, and it collects no data.</p></details>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="band">
+  <div class="wrap">
+    <h2>Never lose the count.</h2>
+    <a class="store" href="https://apps.apple.com/app/apple-store/id6801272272?pt=129049158&amp;ct=web-picot-en&amp;mt=8">View Picot on the App Store</a>
+    <p class="price-note">Available in English and Spanish.</p>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap wide">
+    <nav aria-label="Footer">
+      <a href="c2c-calculator/">C2C calculator</a>
+      <a href="support/">Support</a>
+      <a href="privacy/">Privacy</a>
+      <a href="es/" hreflang="es" lang="es">Picot en español</a>
+    </nav>
+    <p>Picot is an app by Antonio González Isunza (Aguapiedra Estudio), Mexico. Apple Watch and iPhone are trademarks of Apple Inc.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var n=47, alertAt=50;
+  var dial=document.getElementById('dial'), c=document.getElementById('dial-count'),
+      al=document.getElementById('dial-alert');
+  function draw(){ c.textContent=n; al.hidden=(n!==alertAt); }
+  dial.addEventListener('click',function(){ n = n>=99 ? 1 : n+1; draw(); });
+  draw();
+})();
+</script>
+</body>
+</html>

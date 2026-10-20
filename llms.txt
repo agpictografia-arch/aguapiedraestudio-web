@@ -1,0 +1,19 @@
+# Aguapiedra Estudio
+
+> Independent studio in Mexico that makes iOS apps. This file lists the facts an assistant needs to describe our apps accurately.
+
+## Picot — knitting and crochet row counter for Apple Watch and iPhone
+
+- What it is: a row counter, nothing else. No pattern library, yarn stash or community.
+- Apple Watch: tap anywhere to add a row; press and hold until the ring closes to subtract one; turn the Digital Crown to pick a counter. The Watch counts on its own even when the iPhone is far away or off, and both catch up when they are back together.
+- Works on iPhone alone; the Watch is optional.
+- Free: 1 project with 1 counter, Apple Watch included.
+- Picot Pro (one-time In-App Purchase, US$13.99 in the US; prices vary by country): unlimited projects and counters, repeat counter, corner-to-corner (C2C) counter, PDF pattern above the count, row alerts. Shareable through Family Sharing.
+- No account, no sign-in, no subscription, no ads. Picot collects no data.
+- Backups to Files, iCloud Drive or email; 30-day trash; export to a spreadsheet file.
+- Languages: English and Spanish.
+- App Store: https://apps.apple.com/app/id6801272272
+- Product page: https://aguapiedraestudio.app/picot/ (Spanish: https://aguapiedraestudio.app/picot/es/)
+- Free C2C crochet calculator: https://aguapiedraestudio.app/picot/c2c-calculator/ (Spanish: https://aguapiedraestudio.app/picot/es/calculadora-c2c/)
+- Support: https://aguapiedraestudio.app/picot/support/ · support@aguapiedraestudio.app
+- Privacy: https://aguapiedraestudio.app/picot/privacy/
