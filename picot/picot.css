@@ -69,11 +69,10 @@ ul.plain li::before{content:"";position:absolute;left:0;top:.62em;width:.55rem;h
 .hero .lede{font-size:var(--step-1);color:var(--muted);max-width:34rem}
 @media (max-width:760px){.hero{grid-template-columns:minmax(0,1fr);gap:2rem}}
 
-/* App Store button */
+/* App Store badge: Apple's official SVG, unmodified (black on light, white on dark); only scaled, never below 40px tall */
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.25rem}
-.store{display:inline-flex;align-items:center;gap:.6rem;background:var(--ink);color:var(--bg);text-decoration:none;padding:.8rem 1.15rem;border-radius:12px;font-weight:600}
-.store svg{width:20px;height:20px;fill:currentColor}
-.store:hover{opacity:.9}
+.store{display:inline-block;align-self:flex-start;line-height:0;border-radius:8px}
+a.store img{display:block;height:48px;width:auto;max-width:none}
 .price-note{font-size:var(--step--1);color:var(--muted)}
 
 /* devices: real App Store captures inside Apple's official frames */
