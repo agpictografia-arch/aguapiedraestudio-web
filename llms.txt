@@ -1,6 +1,6 @@
 # Aguapiedra Estudio
 
-> Independent studio in Mexico that makes iOS apps. This file lists the facts an assistant needs to describe our apps accurately.
+> Independent studio that makes iOS apps. This file lists the facts an assistant needs to describe our apps accurately.
 
 ## Picot — knitting and crochet row counter for Apple Watch and iPhone
 
