@@ -18,3 +18,4 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 - Imágenes: solo capturas reales de la app dentro de las carcasas oficiales de Apple (`picot-motion/public/carcasas`, medidas en `src/devices.tsx`), en `picot/img/*.webp`. Nada generado con IA que muestre la app o el reloj.
 - Identidad pública: solo "Aguapiedra Estudio". Sin el nombre de Tony ni el país en ninguna página (decisión de Tony, 19-oct-2026).
 - `llms.txt`, `sitemap.xml` y `robots.txt` en la raíz: al agregar o mover una página, actualizarlos.
+- `google3e65d2da1e3dce11.html` en la raíz verifica Google Search Console (propiedad `https://aguapiedraestudio.app/`, cuenta ag.pictografia@gmail.com). No borrarlo.
