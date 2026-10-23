@@ -19,3 +19,10 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 - Identidad pública: solo "Aguapiedra Estudio". Sin el nombre de Tony ni el país en ninguna página (decisión de Tony, 19-oct-2026).
 - `llms.txt`, `sitemap.xml` y `robots.txt` en la raíz: al agregar o mover una página, actualizarlos.
 - `google3e65d2da1e3dce11.html` en la raíz verifica Google Search Console (propiedad `https://aguapiedraestudio.app/`, cuenta ag.pictografia@gmail.com). No borrarlo.
+
+## Mend (`/mend/`)
+
+- Páginas: `/mend/privacy/` y `/mend/terms/` (ES), `/mend/en/privacy/` y `/mend/en/terms/` (EN). Política y Términos de la app Mend, ratificados por Tony el 22-oct-2026 (texto fuente en el repo `mend-legal`, rama `mend-1.3.0`).
+- **Excepción a la regla de identidad pública** (Tony, 22-oct-2026): en las páginas legales de Mend va el nombre de Tony como responsable, porque la ley mexicana de datos personales lo exige; junto a él va "Aguapiedra Estudio". Sin país. Fuera de lo legal, la regla general sigue.
+- `legal.mymend.app` (repo `mend-legal`) redirige aquí; no se borra: la 1.2.1 publicada enlaza a esas URLs.
+- Contacto de Mend: `support@mymend.app` (decisión del 9-oct-2026).
