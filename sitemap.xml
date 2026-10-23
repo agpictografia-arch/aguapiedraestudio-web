@@ -14,4 +14,16 @@
     <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/calculadora-c2c/"/></url>
   <url><loc>https://aguapiedraestudio.app/picot/support/</loc></url>
   <url><loc>https://aguapiedraestudio.app/picot/privacy/</loc></url>
+  <url><loc>https://aguapiedraestudio.app/mend/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/privacy/"/></url>
+  <url><loc>https://aguapiedraestudio.app/mend/en/privacy/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/privacy/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/privacy/"/></url>
+  <url><loc>https://aguapiedraestudio.app/mend/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/terms/"/></url>
+  <url><loc>https://aguapiedraestudio.app/mend/en/terms/</loc>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/terms/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/terms/"/></url>
 </urlset>
