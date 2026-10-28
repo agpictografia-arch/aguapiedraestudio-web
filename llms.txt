@@ -32,3 +32,7 @@
 - Website: https://mymend.app · Support: support@mymend.app
 - Privacy: https://aguapiedraestudio.app/mend/privacy/ (English: https://aguapiedraestudio.app/mend/en/privacy/)
 - Terms: https://aguapiedraestudio.app/mend/terms/ (English: https://aguapiedraestudio.app/mend/en/terms/)
+
+## Consumer health data
+
+- Aguapiedra Estudio collects no consumer health data. Policy: https://aguapiedraestudio.app/consumer-health-data/

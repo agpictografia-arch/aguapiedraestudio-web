@@ -33,4 +33,7 @@
   <url><loc>https://aguapiedraestudio.app/mend/en/terms/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/terms/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/terms/"/></url>
+  <url><loc>https://aguapiedraestudio.app/marelle/privacy/</loc></url>
+  <url><loc>https://aguapiedraestudio.app/marelle/support/</loc></url>
+  <url><loc>https://aguapiedraestudio.app/consumer-health-data/</loc></url>
 </urlset>
