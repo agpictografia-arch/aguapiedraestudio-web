@@ -21,6 +21,14 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 - `llms.txt`, `sitemap.xml` y `robots.txt` en la raíz: al agregar o mover una página, actualizarlos.
 - `google3e65d2da1e3dce11.html` en la raíz verifica Google Search Console (propiedad `https://aguapiedraestudio.app/`, cuenta ag.pictografia@gmail.com). No borrarlo.
 
+## Marelle (`/marelle/`) y `/consumer-health-data/`
+
+- Páginas: `/marelle/privacy/` y `/marelle/support/` (EN arriba, ES abajo, una URL cada una) y `/consumer-health-data/` (nivel estudio, solo EN, sin nombrar ninguna app; link propio en la raíz con el texto exacto "Consumer Health Data Privacy Policy").
+- Texto fuente: subpágina «Marelle — Privacidad y Soporte (v3)» de la ficha de Marelle en Notion, OK de Tony 28-oct-2026 17:05. Cualquier cambio de texto sale de esa subpágina, con OK de Tony.
+- Responsable en las tres: solo «Aguapiedra Estudio», sin nombre de Tony ni país (Tony 28-oct-2026; sigue la regla de identidad pública, sin la excepción de Mend).
+- Estilo: Privacidad y Soporte con la marca de Marelle (colores de `marelle/design/tokens.json`, Figtree alojada en `marelle/fonts/` con su `OFL.txt`, ícono en `marelle/img/`; Tony 28-oct). `/consumer-health-data/` neutral, sin marca de ninguna app.
+- Marelle aún no está en la raíz ni en `llms.txt` como app (no ha salido); se agrega al lanzamiento.
+
 ## Mend (`/mend/`)
 
 - Páginas: `/mend/privacy/` y `/mend/terms/` (ES), `/mend/en/privacy/` y `/mend/en/terms/` (EN). Política y Términos de la app Mend, ratificados por Tony el 22-oct-2026 (texto fuente en el repo `mend-legal`, rama `mend-1.3.0`).
