@@ -2,6 +2,14 @@
 
 Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Dominio en `CNAME`.
 
+## Hosting (09-nov-2026, OK de Tony)
+
+- Se sirve desde **Vercel**, proyecto `aguapiedraestudio-web` (equipo Aguapiedra Estudio, Hobby), conectado a este repo: push a `main` = deploy de producción. GitHub Pages ya no recibe tráfico (los A/AAAA de GitHub y el CNAME `www` se borraron del DNS de Vercel); `CNAME` se queda en el repo solo como respaldo para volver atrás.
+- `vercel.json`: `trailingSlash: true` (mismas URLs que en GitHub Pages). `www` redirige al dominio principal.
+- **Vercel Web Analytics** (sin cookies): script `/_vercel/insights/script.js` en la raíz y en todas las páginas de Picot. No se pone en las páginas legales de Mend ni de Marelle. Página nueva de Picot = agregar el script.
+- **IndexNow:** clave en `9fcaa630bbd44705907cbc128509558c.txt` (raíz, no borrar). Tras publicar páginas nuevas o cambios, avisar con `https://api.indexnow.org/indexnow?url=<url>&key=<clave>`.
+- DNS: no tocar MX, TXT (SPF, `apple-domain`, `_dmarc`) ni `sig1._domainkey`: son el correo de iCloud.
+
 ## Gates de Tony
 
 - **Push o merge a `main` = publicar la web.** Solo con OK explícito de Tony y solo textos ratificados por él.
