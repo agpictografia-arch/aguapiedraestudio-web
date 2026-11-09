@@ -7,7 +7,7 @@
 - What it is: a row counter, nothing else. No pattern library, yarn stash or community.
 - Apple Watch: tap anywhere to add a row; press and hold until the ring closes to subtract one; turn the Digital Crown to pick a counter. The Watch counts on its own even when the iPhone is far away or off, and both catch up when they are back together.
 - Works on iPhone alone; the Watch is optional.
-- Free: 1 project with 1 counter, Apple Watch included.
+- Free 7-day trial of every feature, Apple Watch included. After 7 days without Pro, projects stay viewable, exportable and backed up, but counting requires Picot Pro.
 - Picot Pro (one-time In-App Purchase, US$13.99 in the US; prices vary by country): unlimited projects and counters, repeat counter, corner-to-corner (C2C) counter, PDF pattern above the count, row alerts. Shareable through Family Sharing.
 - No account, no sign-in, no subscription, no ads. Picot collects no data.
 - Backups to Files, iCloud Drive or email; 30-day trash; export to a spreadsheet file.
