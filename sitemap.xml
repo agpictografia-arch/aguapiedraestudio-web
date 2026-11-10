@@ -3,10 +3,16 @@
   <url><loc>https://aguapiedraestudio.app/</loc></url>
   <url><loc>https://aguapiedraestudio.app/picot/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/"/></url>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aguapiedraestudio.app/picot/ja/"/></url>
   <url><loc>https://aguapiedraestudio.app/picot/es/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/"/></url>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aguapiedraestudio.app/picot/ja/"/></url>
+  <url><loc>https://aguapiedraestudio.app/picot/ja/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/"/>
+    <xhtml:link rel="alternate" hreflang="ja" href="https://aguapiedraestudio.app/picot/ja/"/></url>
   <url><loc>https://aguapiedraestudio.app/picot/c2c-calculator/</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/picot/c2c-calculator/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/picot/es/calculadora-c2c/"/></url>
