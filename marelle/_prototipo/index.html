@@ -9,16 +9,16 @@
 :root{
   --canvas:#f1f2f3; --surface:#ffffff; --ink:#2a2d33; --ink-2:#2a2d33b8; --ink-3:#2a2d3373; --line:#e3e5e7; --inverse:#2a2d33; --on-inverse:#f1f2f3;
   --violet:#8a5cf6; --violet-ink:#7444f0; --violet-wash:#8a5cf617;
-  --red:#e8606a; --red-ink:#c3343e; --yellow:#eab54a; --yellow-ink:#8c6310; --green:#3aa886; --green-ink:#28785f; --blue:#5a7fe0; --blue-ink:#3861cd;
+  --red:#e8606a; --red-ink:#c3343e; --yellow:#eab54a; --yellow-ink:#8c6310; --green:#2bab83; --green-ink:#1d7c5e; --blue:#3e83ea; --blue-ink:#1c5fc4;
   --tint-a:2e; --font:"Figtree",ui-rounded,system-ui,-apple-system,"Segoe UI",sans-serif;
   --r-lg:22px; --r-md:14px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --canvas:#16181c; --surface:#22252a; --ink:#f1f2f3; --ink-2:#f1f2f3b8; --ink-3:#f1f2f373; --line:#33363c; --inverse:#f1f2f3; --on-inverse:#16181c;
-  --violet-ink:#a07cf9; --violet-wash:#8a5cf629; --red-ink:#ff6b76; --yellow-ink:#eab54a; --green-ink:#3aa886; --blue-ink:#6d8de3; color-scheme:dark}}
+  --violet-ink:#a07cf9; --violet-wash:#8a5cf629; --red-ink:#ff6b76; --yellow-ink:#eab54a; --green-ink:#2bab83; --blue-ink:#5894ee; color-scheme:dark}}
 :root[data-theme="dark"]{
   --canvas:#16181c; --surface:#22252a; --ink:#f1f2f3; --ink-2:#f1f2f3b8; --ink-3:#f1f2f373; --line:#33363c; --inverse:#f1f2f3; --on-inverse:#16181c;
-  --violet-ink:#a07cf9; --violet-wash:#8a5cf629; --red-ink:#ff6b76; --yellow-ink:#eab54a; --green-ink:#3aa886; --blue-ink:#6d8de3; color-scheme:dark}
+  --violet-ink:#a07cf9; --violet-wash:#8a5cf629; --red-ink:#ff6b76; --yellow-ink:#eab54a; --green-ink:#2bab83; --blue-ink:#5894ee; color-scheme:dark}
 
 *{box-sizing:border-box}
 body{background:var(--canvas);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.5;-webkit-font-smoothing:antialiased}
@@ -379,7 +379,7 @@ footer a{color:var(--ink);font-weight:600}
 (() => {
 const RM = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const NS = 'http://www.w3.org/2000/svg';
-const C = {period:'#e8606a',follicular:'#3aa886',ovulation:'#eab54a',luteal:'#5a7fe0',none:'#8a5cf6',grey:'#9aa0a8'};
+const C = {period:'#e8606a',follicular:'#2bab83',ovulation:'#eab54a',luteal:'#3e83ea',none:'#8a5cf6',grey:'#9aa0a8'};
 const PIECES = [ // top to bottom, origins from Casilla.swift
   {k:'sky',ph:'luteal',x:0,y:0,w:90,h:44},
   {k:'o1',ph:'ovulation',x:0,y:54,w:40,h:34},{k:'o2',ph:'ovulation',x:50,y:54,w:40,h:34},
