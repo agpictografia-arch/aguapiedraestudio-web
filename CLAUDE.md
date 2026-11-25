@@ -6,7 +6,7 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 
 - Se sirve desde **Vercel**, proyecto `aguapiedraestudio-web` (equipo Aguapiedra Estudio, Hobby), conectado a este repo: push a `main` = deploy de producción. GitHub Pages ya no recibe tráfico (los A/AAAA de GitHub y el CNAME `www` se borraron del DNS de Vercel); `CNAME` se queda en el repo solo como respaldo para volver atrás.
 - `vercel.json`: `trailingSlash: true` (mismas URLs que en GitHub Pages). `www` redirige al dominio principal.
-- **Vercel Web Analytics** (sin cookies): script `/_vercel/insights/script.js` en la raíz y en todas las páginas de Picot. No se pone en las páginas legales de Mend ni de Marelle. Página nueva de Picot = agregar el script.
+- **Vercel Web Analytics** (sin cookies): script `/_vercel/insights/script.js` en la raíz y en todas las páginas de Picot. No se pone en las páginas legales de Mend ni de Marelle. Página nueva de Picot o de la landing de Marelle = agregar el script.
 - **IndexNow:** clave en `9fcaa630bbd44705907cbc128509558c.txt` (raíz, no borrar). Tras publicar páginas nuevas o cambios, avisar con `https://api.indexnow.org/indexnow?url=<url>&key=<clave>`.
 - DNS: no tocar MX, TXT (SPF, `apple-domain`, `_dmarc`) ni `sig1._domainkey`: son el correo de iCloud.
 
@@ -37,7 +37,7 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 - Estilo: Privacidad y Soporte con la marca de Marelle (colores de `marelle/design/tokens.json`, Figtree alojada en `marelle/fonts/` con su `OFL.txt`, ícono en `marelle/img/`; Tony 28-oct). `/consumer-health-data/` neutral, sin marca de ninguna app.
 - Landing (publicada al lanzamiento, Tony 24-nov-2026): `/marelle/` (EN) y `/marelle/es/` (ES), páginas fijas con hreflang, construidas desde el prototipo aprobado por Tony (29-oct, colores 12-nov), sin texto nuevo. Fuente del prototipo: rama `marelle/prototipo-web`. Marelle ya está en la raíz, `sitemap.xml` y `llms.txt`.
 - Enlaces al App Store: `https://apps.apple.com/[mx/]app/apple-store/id6820226177?pt=129049158&ct=<token>&mt=8`. Tokens: `web-marelle-{en|es}-{nav|hero|plans}`. Insignia oficial de Apple en `marelle/img/`.
-- Sin Vercel Web Analytics en la landing de Marelle (pendiente de decisión de Tony).
+- Vercel Web Analytics (sin cookies) en `/marelle/` y `/marelle/es/` (Tony 24-nov-2026). No en `/marelle/privacy/` ni `/marelle/support/`.
 
 ## Mend (`/mend/`)
 
