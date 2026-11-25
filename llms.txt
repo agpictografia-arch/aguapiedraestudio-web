@@ -20,6 +20,19 @@
 - Support: https://aguapiedraestudio.app/picot/support/ · support@aguapiedraestudio.app
 - Privacy: https://aguapiedraestudio.app/picot/privacy/
 
+## Marelle — period and perimenopause tracker for iPhone
+
+- What it is: understand your cycle at every stage of life, from your own history, kept only on your phone. Not a medical app: it doesn't diagnose and isn't a method of birth control.
+- No account and no server for your cycle; App Store privacy label: Data Not Collected. Works with Apple Health.
+- Phases from your real cycle, not a 28-day template; the next period is shown as a range. Logs hot flashes, night sweats and sleep changes for the transition. A PDF summary to bring to your doctor.
+- Guidance cards with their sources; no AI inside the app.
+- Marelle Free stays free. Marelle Insights (subscription, US$12.99 for 6 months or US$19.99 a year in the US; prices vary by country; no trial): patterns from your own logs, guidance picked from them, your week ahead, and a page for your appointment in the transition.
+- Languages: English and Spanish.
+- App Store: https://apps.apple.com/app/id6820226177
+- Product page: https://aguapiedraestudio.app/marelle/ (Spanish: https://aguapiedraestudio.app/marelle/es/)
+- Support: https://aguapiedraestudio.app/marelle/support/ · support@aguapiedraestudio.app
+- Privacy: https://aguapiedraestudio.app/marelle/privacy/
+
 ## Mend — communication coaching for hard conversations with the people closest to you
 
 - What it is: an iOS app for adults (18+) to let it out and find their words when things get tense with a partner, family, friends, or work that spills into personal life. Inspired by Marshall Rosenberg's Nonviolent Communication and John Gottman's research. Not a substitute for mental health care.

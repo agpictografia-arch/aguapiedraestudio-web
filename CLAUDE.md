@@ -35,7 +35,9 @@ Sitio estático (HTML/CSS/JS sin build) de las apps de Aguapiedra Estudio. Domin
 - Texto fuente: subpágina «Marelle — Privacidad y Soporte (v3)» de la ficha de Marelle en Notion, OK de Tony 28-oct-2026 17:05. Cualquier cambio de texto sale de esa subpágina, con OK de Tony.
 - Responsable en las tres: solo «Aguapiedra Estudio», sin nombre de Tony ni país (Tony 28-oct-2026; sigue la regla de identidad pública, sin la excepción de Mend).
 - Estilo: Privacidad y Soporte con la marca de Marelle (colores de `marelle/design/tokens.json`, Figtree alojada en `marelle/fonts/` con su `OFL.txt`, ícono en `marelle/img/`; Tony 28-oct). `/consumer-health-data/` neutral, sin marca de ninguna app.
-- Marelle aún no está en la raíz ni en `llms.txt` como app (no ha salido); se agrega al lanzamiento.
+- Landing (publicada al lanzamiento, Tony 24-nov-2026): `/marelle/` (EN) y `/marelle/es/` (ES), páginas fijas con hreflang, construidas desde el prototipo aprobado por Tony (29-oct, colores 12-nov), sin texto nuevo. Fuente del prototipo: rama `marelle/prototipo-web`. Marelle ya está en la raíz, `sitemap.xml` y `llms.txt`.
+- Enlaces al App Store: `https://apps.apple.com/[mx/]app/apple-store/id6820226177?pt=129049158&ct=<token>&mt=8`. Tokens: `web-marelle-{en|es}-{nav|hero|plans}`. Insignia oficial de Apple en `marelle/img/`.
+- Sin Vercel Web Analytics en la landing de Marelle (pendiente de decisión de Tony).
 
 ## Mend (`/mend/`)
 

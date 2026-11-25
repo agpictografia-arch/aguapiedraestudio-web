@@ -34,6 +34,14 @@
   <url><loc>https://aguapiedraestudio.app/mend/en/terms/</loc>
     <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/mend/terms/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/mend/en/terms/"/></url>
+  <url><loc>https://aguapiedraestudio.app/marelle/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/marelle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/marelle/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/marelle/"/></url>
+  <url><loc>https://aguapiedraestudio.app/marelle/es/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://aguapiedraestudio.app/marelle/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://aguapiedraestudio.app/marelle/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://aguapiedraestudio.app/marelle/"/></url>
   <url><loc>https://aguapiedraestudio.app/marelle/privacy/</loc></url>
   <url><loc>https://aguapiedraestudio.app/marelle/support/</loc></url>
   <url><loc>https://aguapiedraestudio.app/consumer-health-data/</loc></url>
